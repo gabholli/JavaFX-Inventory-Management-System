@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="BottomIdCol" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ModifyProduct">
+    <children>
+        <Label layoutX="45.0" layoutY="31.0" text="Modify Product">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label layoutX="45.0" layoutY="82.0" text="ID" />
+        <Label layoutX="45.0" layoutY="117.0" text="Name" />
+        <Label layoutX="45.0" layoutY="156.0" text="Inv" />
+        <Label layoutX="45.0" layoutY="191.0" text="Price" />
+        <Label layoutX="45.0" layoutY="229.0" text="Max" />
+        <TextField fx:id="modifyProductIdField" layoutX="81.0" layoutY="78.0" />
+        <TextField fx:id="modifyProductNameField" layoutX="81.0" layoutY="113.0" />
+        <TextField fx:id="modifyProductInvField" layoutX="81.0" layoutY="152.0" prefHeight="26.0" prefWidth="72.0" />
+        <TextField fx:id="modifyProductPriceField" layoutX="81.0" layoutY="187.0" prefHeight="26.0" prefWidth="72.0" />
+        <TextField fx:id="modifyProductMaxField" layoutX="81.0" layoutY="225.0" prefHeight="26.0" prefWidth="72.0" />
+        <Label layoutX="177.0" layoutY="229.0" text="Min" />
+        <TextField fx:id="modifyProductMinField" layoutX="217.0" layoutY="225.0" prefHeight="26.0" prefWidth="72.0" />
+        <TextField fx:id="modifyProductSearchField" layoutX="637.0" layoutY="27.0" onAction="#modifyProductSearchFieldAction" promptText="Search by Part ID or Name" />
+        <TableView fx:id="modifyProductTopTable" layoutX="430.0" layoutY="61.0" prefHeight="112.0" prefWidth="355.0">
+            <columns>
+                <TableColumn fx:id="topIdCol" prefWidth="55.39996337890625" text="Part ID" />
+                <TableColumn fx:id="topNameCol" prefWidth="71.00003051757812" text="Part Name" />
+                <TableColumn fx:id="topInvCol" prefWidth="97.39996337890625" text="Inventory Level" />
+                <TableColumn fx:id="topPriceCol" prefWidth="137.0" text="Price/Cost Per Unit" />
+            </columns>
+        </TableView>
+        <TableView fx:id="modifyProductBottomTable" layoutX="430.0" layoutY="209.0" prefHeight="112.0" prefWidth="355.0">
+            <columns>
+                <TableColumn fx:id="bottomIdCol" prefWidth="59.20001220703125" text="Part ID" />
+                <TableColumn fx:id="bottomNameCol" prefWidth="66.00003051757812" text="Part Name" />
+                <TableColumn fx:id="bottomInvCol" prefWidth="94.79998779296875" text="Inventory Level" />
+                <TableColumn fx:id="bottomPriceCol" prefWidth="137.20001220703125" text="Price/Cost Per Unit" />
+            </columns>
+        </TableView>
+        <Button fx:id="modifyProductRemoveButton" layoutX="582.0" layoutY="324.0" mnemonicParsing="false" onAction="#removeButtonAction" text="Remove Associated Part" />
+        <Button fx:id="modifyProductSaveButton" layoutX="582.0" layoutY="361.0" mnemonicParsing="false" onAction="#modifyProductSaveAction" text="Save" />
+        <Button fx:id="modifyProductCancelButton" layoutX="674.0" layoutY="361.0" mnemonicParsing="false" onAction="#modifyProductCancelButtonAction" text="Cancel" />
+        <Button fx:id="modifyProductAddButton" layoutX="674.0" layoutY="178.0" mnemonicParsing="false" onAction="#modifyProductAddButtonAction" text="Add" />
+    </children>
+</AnchorPane>

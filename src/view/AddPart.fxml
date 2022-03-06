@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddPart">
+    <children>
+        <HBox layoutX="36.0" layoutY="30.0" prefHeight="23.0" prefWidth="564.0" spacing="50.0">
+            <children>
+                <Label text="Add Part">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <RadioButton fx:id="addPartInHouseRadio" mnemonicParsing="false" onAction="#addPartInHouseRadioAction" selected="true" text="In-House">
+               <toggleGroup>
+                  <ToggleGroup fx:id="addPart" />
+               </toggleGroup></RadioButton>
+                <RadioButton fx:id="addPartOutsourcedRadio" mnemonicParsing="false" onAction="#addPartOutsourcedRadioAction" text="Outsourced" toggleGroup="$addPart">
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </RadioButton>
+            </children>
+        </HBox>
+        <HBox layoutX="36.0" layoutY="84.0" prefHeight="30.0" prefWidth="400.0" spacing="100.0">
+            <children>
+                <Label text="ID">
+                    <padding>
+                        <Insets top="4.0" />
+                    </padding>
+                </Label>
+                <TextField fx:id="addPartIdField" />
+            </children>
+        </HBox>
+        <HBox layoutX="36.0" layoutY="114.0" prefHeight="30.0" prefWidth="400.0" spacing="80.0">
+            <children>
+                <Label text="Name">
+                    <padding>
+                        <Insets top="4.0" />
+                    </padding>
+                </Label>
+                <TextField fx:id="addPartNameField" />
+            </children>
+        </HBox>
+        <HBox layoutX="36.0" layoutY="144.0" prefHeight="30.0" prefWidth="400.0" spacing="96.0">
+            <children>
+                <Label text="Inv">
+                    <padding>
+                        <Insets top="4.0" />
+                    </padding>
+                </Label>
+                <TextField fx:id="addPartInvField" />
+            </children>
+        </HBox>
+        <HBox layoutX="36.0" layoutY="174.0" prefHeight="30.0" prefWidth="400.0" spacing="57.5">
+            <children>
+                <Label text="Price/Cost">
+                    <padding>
+                        <Insets top="4.0" />
+                    </padding>
+                </Label>
+                <TextField fx:id="addPartPriceField" />
+            </children>
+        </HBox>
+        <HBox layoutX="36.0" layoutY="204.0" prefHeight="30.0" prefWidth="262.0" spacing="90.0">
+            <children>
+                <Label text="Max">
+                    <padding>
+                        <Insets top="4.0" />
+                    </padding>
+                </Label>
+                <TextField fx:id="addPartMaxField" />
+            </children>
+        </HBox>
+        <HBox layoutX="36.0" layoutY="234.0" prefHeight="30.0" prefWidth="400.0" spacing="51.0">
+            <children>
+                <Label fx:id="machIdLabel" text="Machine ID">
+                    <padding>
+                        <Insets top="4.0" />
+                    </padding>
+                </Label>
+                <TextField fx:id="addPartMachField" />
+            </children>
+        </HBox>
+        <Button fx:id="addPartSaveButton" layoutX="300.0" layoutY="299.0" mnemonicParsing="false" onAction="#saveAddPartButtonAction" text="Save" />
+        <Button fx:id="addPartCancelButton" layoutX="380.0" layoutY="299.0" mnemonicParsing="false" onAction="#cancelToMainButtonAction" text="Cancel" />
+        <HBox layoutX="318.0" layoutY="204.0" prefHeight="30.0" prefWidth="262.0" spacing="75.0">
+            <children>
+                <Label text="Min">
+                    <padding>
+                        <Insets top="4.0" />
+                    </padding>
+                </Label>
+                <TextField fx:id="addPartMinField" />
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
